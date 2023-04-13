@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TailorNova | Educate</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script>
+      function display() {
+        var ts = document.getElementsByName("ts");
+        if (ts[0].checked == true) {
+          alert("1");
+        } else if (ts[1].checked == true) {
+          alert("2");
+        } else if (ts[2].checked == true) {
+          alert("3");
+        }
+      }
+
+      function fun() {
+        var ftname = document.f1.fname.value;
+        alert(
+          "Hi, " +
+            ftname +
+            "!" +
+            "\nRegistration successfull!!!\nYour ID is 20TRNV86"
+        );
+        var id = prompt("confirm your id");
+        if (id == "") {
+          alert("You are requested to confirm your unique ID");
+        } else if (id == "20TRNV86") {
+          alert("Confirmed :)");
+          document.getElementById("form").reset();
+        } else {
+          alert(
+            "Retry :(\nClick Apply Now again and This time get your ID right!"
+          );
+        }
+        return false;
+        window.location.reload();
+      }
+    </script>
+
+    <style>
+      .form-control:focus {
+        border-color: rgba(203, 9, 99, 0.784);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+          0 0 8px rgba(203, 9, 99, 0.784);
+      }
+      .form-select:focus {
+        border-color: rgba(203, 9, 99, 0.784);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+          0 0 8px rgba(203, 9, 99, 0.784);
+      }
+      .container-fluid:focus {
+        border-color: rgba(203, 9, 99, 0.784);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+          0 0 8px rgba(203, 9, 99, 0.784);
+      }
+      .alert {
+        border: 10%;
+        border-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div
+        class="container-fluid"
+        style="background-color: rgba(203, 9, 99, 0.784)"
+      >
+        <a class="navbar-brand" href="#"></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarSupportedContent"
+          style="background-color: rgba(203, 9, 99, 0.784)"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./wtl_3.html"
+                >Home</a
+              >
+            </li>
+            &emsp;
+            <li class="nav-item">
+              <a class="nav-link" href="https://tailornova.com/about">About</a>
+            </li>
+            &emsp;
+            <li class="nav-item">
+              <a class="nav-link" href="https://tailornova.com/contest"
+                >Contest</a
+              >
+            </li>
+            &emsp;
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Educate</a>
+            </li>
+            &emsp;
+            <li class="nav-item">
+              <a class="nav-link" href="./shop.html">Shop</a>
+            </li>
+            &emsp;
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://tailornova.com/faq">Faq</a>
+            </li>
+            &emsp;
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Guide</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">1st Level</a></li>
+                <li><a class="dropdown-item" href="#">2nd Level</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="https://tailornova.com/explore"
+                    >Final</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Technology </a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              class="btn btn-outline-success"
+              type="submit"
+              style="border: rgba(203, 9, 99, 0.784); color: black"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!--logo-->
+    <div class="container-fluid">
+      <center>
+        <h1
+          style="font-family: Brush Script MT; color: rgba(203, 9, 99, 0.784)"
+        >
+          TailorNova
+        </h1>
+        <h3 style="background-color: rgba(233, 143, 188, 0.784); color: white">
+          EDUCATE
+        </h3>
+      </center>
+    </div>
+
+    <!--form-->
+    <div class="container-fluid">
+      <fieldset class="border p-2">
+        <form
+          class="row gy-2 gx-3 align-items-center"
+          id="form"
+          style="
+            border: 1px solid rgba(203, 9, 99, 0.784);
+            padding: 3%;
+            margin: 10%;
+          "
+          name="f1"
+          onsubmit="fun()"
+        >
+          <div
+            class="container-fluid"
+            id="fhead"
+            style="
+              background-color: rgba(203, 9, 99, 0.784);
+              padding: 2%;
+              margin-top: 1%;
+              margin-bottom: 3%;
+            "
+          >
+            <center>
+              <h4 style="color: white">
+                Supporting distanced learning and encouraging <br />
+                student creativity has never been so easy
+              </h4>
+            </center>
+          </div>
+
+          <div class="col-md-6">
+            <label for="inputfname" class="form-label">First Name</label>
+            <input
+              type="name"
+              class="form-control"
+              id="inputfname"
+              name="fname"
+              pattern="[a-zA-Z]{5,}"
+              required="true"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="inputlname" class="form-label">Last Name</label>
+            <input
+              type="name"
+              class="form-control"
+              id="inputlname"
+              name="lname"
+              pattern="[a-zA-Z]{3,}"
+              required="true"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="inputdob" class="form-label">Date of Birth</label>
+            <input
+              type="date"
+              class="form-control"
+              pattern="\d{4}-\d{2}-\d{2}"
+              id="inputdob"
+              name="dob"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="inputage" class="form-label">Age</label>
+            <input
+              type="number"
+              class="form-control"
+              id="inputage"
+              name="age"
+              pattern="[0-9]{2}"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="inputgen" class="form-label">Gender</label>
+
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gen"
+                id="gen1"
+                required
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Female
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gen"
+                id="gen2"
+                required
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Male
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gen"
+                id="gen3"
+                required
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+                Others
+              </label>
+            </div>
+          </div>
+
+          <div class="col-md-6"></div>
+
+          <div class="col-md-6">
+            <label for="inputemail" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="inputemail"
+              name="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="inputnum" class="form-label">Phone Number</label>
+            <input
+              type="text"
+              class="form-control"
+              pattern="[0-9]{10}"
+              id="inputnum"
+              name="num"
+              required
+            />
+          </div>
+
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Address 1</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputAddress"
+              placeholder="1234 Main St"
+              name="ads1"
+              required
+            />
+          </div>
+          <div class="col-12">
+            <label for="inputAddress2" class="form-label" name="ads2"
+              >Address 2</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="inputAddress2"
+              placeholder="Apartment, studio, or floor"
+              name="ads2"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">City</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputCity"
+              name="city"
+              required
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">State</label>
+            <select id="inputState" class="form-select" name="state">
+              <option selected disabled>Choose...</option>
+
+              <option value="Andhra Pradesh">Andhra Pradesh</option>
+              <option value="Andaman and Nicobar Islands">
+                Andaman and Nicobar Islands
+              </option>
+              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+              <option value="Assam">Assam</option>
+              <option value="Bihar">Bihar</option>
+              <option value="Chandigarh">Chandigarh</option>
+              <option value="Chhattisgarh">Chhattisgarh</option>
+              <option value="Dadar and Nagar Haveli">
+                Dadar and Nagar Haveli
+              </option>
+              <option value="Daman and Diu">Daman and Diu</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Lakshadweep">Lakshadweep</option>
+              <option value="Puducherry">Puducherry</option>
+              <option value="Goa">Goa</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value="Haryana">Haryana</option>
+              <option value="Himachal Pradesh">Himachal Pradesh</option>
+              <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+              <option value="Jharkhand">Jharkhand</option>
+              <option value="Karnataka">Karnataka</option>
+              <option value="Kerala">Kerala</option>
+              <option value="Madhya Pradesh">Madhya Pradesh</option>
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Manipur">Manipur</option>
+              <option value="Meghalaya">Meghalaya</option>
+              <option value="Mizoram">Mizoram</option>
+              <option value="Nagaland">Nagaland</option>
+              <option value="Odisha">Odisha</option>
+              <option value="Punjab">Punjab</option>
+              <option value="Rajasthan">Rajasthan</option>
+              <option value="Sikkim">Sikkim</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+              <option value="Telangana">Telangana</option>
+              <option value="Tripura">Tripura</option>
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
+              <option value="Uttarakhand">Uttarakhand</option>
+              <option value="West Bengal">West Bengal</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="inputZip" class="form-label">Zip</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputZip"
+              name="zip"
+              required
+            />
+          </div>
+
+          <div class="col-md-6">
+            <label for="inpusub" class="form-label">Type of Subscription</label>
+
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="ts"
+                id="m3"
+                required
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                3 months
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="ts" id="m6" />
+              <label class="form-check-label" for="flexRadioDefault1">
+                6 months
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="ts" id="m12" />
+              <label class="form-check-label" for="flexRadioDefault2">
+                12 months
+              </label>
+            </div>
+            <br />
+            <button type="button" onclick="display()">Submit</button>
+            <br /><br />
+          </div>
+
+          <div class="col-12">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="gridCheck"
+                required
+              />
+              <label class="form-check-label" for="gridCheck">
+                I hereby declare that all the above given datas are upto my
+                knowledge.
+              </label>
+            </div>
+          </div>
+          <div class="col-12" style="margin-top: 1%">
+            <center>
+              <input
+                type="submit"
+                value="APPLY NOW"
+                class="btn btn-primary"
+                style="
+                  background-color: rgba(203, 9, 99, 0.784);
+                  border: rgba(203, 9, 99, 0.784);
+                  padding-left: 3%;
+                  padding-right: 3%;
+                "
+              />
+            </center>
+          </div>
+        </form>
+      </fieldset>
+    </div>
+  </body>
+</html>

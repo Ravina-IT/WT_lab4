@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TailorNova | Shop</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .cart {
+        margin-top: 30px;
+      }
+
+      button {
+        font-size: 20px;
+        background-color: rgba(203, 9, 99, 0.784);
+        color: white;
+        border: none;
+        padding: 10px;
+        margin: 10px;
+        cursor: pointer;
+      }
+
+      #count {
+        font-size: 30px;
+        margin: 10px;
+      }
+
+      .bill {
+        margin-top: 30px;
+      }
+
+      .dresses {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        margin-top: 30px;
+      }
+
+      .dress {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        margin: 20px;
+        border-radius: 100px;
+        border-color: rgba(203, 9, 99, 0.784);
+      }
+
+      .dress img {
+        max-width: 200px;
+        max-height: 200px;
+        cursor: pointer;
+        border-color: rgba(203, 9, 99, 0.784);
+        border: 3%;
+      }
+
+      .dress p {
+        font-size: 20px;
+        margin: 10px;
+      }
+
+      .buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .addBtn,
+      .removeBtn {
+        font-size: 20px;
+        background-color: rgba(203, 9, 99, 0.784);
+        color: white;
+        border: none;
+        padding: 10px;
+        margin: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div
+        class="container-fluid"
+        style="background-color: rgba(203, 9, 99, 0.784)"
+      >
+        <a class="navbar-brand" href="#"></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarSupportedContent"
+          style="background-color: rgba(203, 9, 99, 0.784)"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./wtl_3.html"
+                >Home</a
+              >
+            </li>
+            &emsp;
+            <li class="nav-item">
+              <a class="nav-link" href="https://tailornova.com/about">About</a>
+            </li>
+            &emsp;
+            <li class="nav-item">
+              <a class="nav-link" href="https://tailornova.com/contest"
+                >Contest</a
+              >
+            </li>
+            &emsp;
+            <li class="nav-item">
+              <a class="nav-link" href="./educate.html">Educate</a>
+            </li>
+            &emsp;
+            <li class="nav-item">
+              <a class="nav-link active" href="./shop.html">Shop</a>
+            </li>
+            &emsp;
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://tailornova.com/faq">Faq</a>
+            </li>
+            &emsp;
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Guide</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">1st Level</a></li>
+                <li><a class="dropdown-item" href="#">2nd Level</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="https://tailornova.com/explore"
+                    >Final</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Technology </a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              class="btn btn-outline-success"
+              type="submit"
+              style="border: rgba(203, 9, 99, 0.784); color: black"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!--logo-->
+    <!--logo-->
+    <div class="container-fluid">
+      <center>
+        <h1
+          style="font-family: Brush Script MT; color: rgba(203, 9, 99, 0.784)"
+        >
+          TailorNova
+        </h1>
+        <h3 style="background-color: rgba(233, 143, 188, 0.784); color: white">
+          SHOP
+        </h3>
+      </center>
+    </div>
+    <div
+      class="container-fluid"
+      id="fhead"
+      style="
+        background-color: rgba(203, 9, 99, 0.784);
+        width: 50%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+      "
+    >
+      <center>
+        <h4 style="color: white">Create new Masterpiece!</h4>
+      </center>
+    </div>
+
+    <!--dress container-->
+    <div class="container-fluid">
+      <div class="cart" style="text-align: center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-cart"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+          />
+        </svg>
+        <h2 style="text-align: center">Cart</h2>
+        <!--<button id="removeBtn" onclick="removeItem()">-</button>-->
+        <span id="count">0</span>
+        <!--<button id="addBtn" onclick="addItem()">+</button>-->
+        <p>Total amount: <span id="totalAmount">0</span></p>
+        <button
+          type="button"
+          class="btn btn-primary"
+          style="
+            background-color: rgba(203, 9, 99, 0.784);
+            border: rgba(203, 9, 99, 0.784);
+            padding-left: 8%;
+            padding-right: 8%;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            text-align: center;
+          "
+          onclick="dis()"
+        >
+          Click to generate Final Amount with Discounts
+          <hr />
+          Get 20% OFF by shopping Rs.2000+ !! <br />Get 10% OFF by shopping
+          Rs.1000+ !!
+        </button>
+        <p>Discount: <span id="off">0</span></p>
+        <p>Final amount: <span id="finalAmount">0</span></p>
+      </div>
+      <br /><br />
+      <div class="dresses">
+        <h6>WOMENSWEAR</h6>
+
+        <div class="dress">
+          <img
+            src="https://paintingvalley.com/drawings/dress-outline-drawing-1.jpg"
+            alt="Dress 1"
+          />
+          <p>Dresses</p>
+          <div class="buttons">
+            <button class="removeBtn" onclick="removeItem(150)">-</button>
+            <span id="rate">Rs.150</span>
+            <button class="addBtn" onclick="addItem(150)">+</button>
+          </div>
+        </div>
+        <div class="dress">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/000/341/240/original/vector-blouse-fashion-flat-technical-drawing-template.jpg
+          "
+            alt="Dress 2"
+            style="height: 200px"
+          />
+          <p>Tops</p>
+          <div class="buttons">
+            <button class="removeBtn" onclick="removeItem(100)">-</button>
+            <span id="rate">Rs.100</span>
+            <button class="addBtn" onclick="addItem(100)">+</button>
+          </div>
+        </div>
+        <div class="dress">
+          <img
+          src="https://i.pinimg.com/originals/5d/57/ae/5d57ae4e586ff53860d6e2c181283a95.jpg
+          "" alt="Dress 3" />
+          <p>Jumpsuits</p>
+          <div class="buttons">
+            <button class="removeBtn" onclick="removeItem(250)">-</button>
+            <span id="rate">Rs.250</span>
+            <button class="addBtn" onclick="addItem(250)">+</button>
+          </div>
+        </div>
+        <div class="dress">
+          <img
+            src="http://www.lekala.co/files/models/1209/1209_technical_drawing_6006.jpg"
+            alt="Dress 4"
+          />
+          <p>Pants</p>
+          <div class="buttons">
+            <button class="removeBtn" onclick="removeItem(100)">-</button>
+            <span id="rate">Rs.100</span>
+            <button class="addBtn" onclick="addItem(100)">+</button>
+          </div>
+        </div>
+        <div class="dress">
+          <img
+            src="https://i.pinimg.com/736x/2e/9e/bf/2e9ebfda74e67c7c6521cebc375b7222--pattern-skirt-skirt-patterns.jpg"
+            alt="Dress 5"
+          />
+          <p>Skirts</p>
+          <div class="buttons">
+            <button class="removeBtn" onclick="removeItem(200)">-</button>
+            <span id="rate">Rs.200</span>
+            <button class="addBtn" onclick="addItem(200)">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="dresses">
+        <h6>MENSWEAR</h6>
+        <div class="dress">
+          <img
+            src="https://i.pinimg.com/originals/63/c2/ee/63c2ee0ce6a9781832abb6257a5a2f6c.jpg"
+            alt="Dress 6"
+            style="height: 200px"
+          />
+          <p>Shirts</p>
+          <div class="buttons">
+            <button class="removeBtn" onclick="removeItem(200)">-</button>
+            <span id="rate">Rs.200</span>
+            <button class="addBtn" onclick="addItem(200)">+</button>
+          </div>
+        </div>
+        <div class="dress">
+          <img
+            src="https://tse1.mm.bing.net/th?id=OIP.GlApL8j6OQxTlAQGpGXaigHaJn&pid=Api&P=0"
+            alt="Dress 7"
+          />
+          <p>T-shirts</p>
+          <div class="buttons">
+            <button class="removeBtn" onclick="removeItem(150)">-</button>
+            <span id="rate">Rs.150</span>
+            <button class="addBtn" onclick="addItem(150)">+</button>
+          </div>
+        </div>
+        <div class="dress">
+          <img
+            src="https://paintingvalley.com/sketches/pants-sketch-26.jpg"
+            alt="Dress 8"
+          />
+          <p>Pants</p>
+          <div class="buttons">
+            <button class="removeBtn" onclick="removeItem(150)">-</button>
+            <span id="rate">Rs.150</span>
+            <button class="addBtn" onclick="addItem(150)">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var count = 0;
+      var totalPrice = 0;
+      var finalPrice = 0;
+
+      function addPrice(price) {
+        count++;
+        totalPrice += price;
+        document.getElementById("count").innerHTML = count;
+        document.getElementById("totalAmount").innerHTML = totalPrice;
+      }
+
+      function addItem(price) {
+        addPrice(price);
+      }
+
+      function removeItem(price) {
+        if (count > 0) {
+          count--;
+          totalPrice -= price;
+          document.getElementById("count").innerHTML = count;
+          document.getElementById("totalAmount").innerHTML = totalPrice;
+        }
+      }
+
+      function dis() {
+        if (totalPrice > 2000) {
+          finalPrice = totalPrice - (totalPrice * 20) / 100;
+          document.getElementById("off").innerHTML = "20%";
+          document.getElementById("finalAmount").innerHTML = finalPrice;
+        } else if (totalPrice > 1000) {
+          finalPrice = totalPrice - (totalPrice * 10) / 100;
+          document.getElementById("off").innerHTML = "10%";
+          document.getElementById("finalAmount").innerHTML = finalPrice;
+        } else {
+          document.getElementById("off").innerHTML = "0%";
+          document.getElementById("finalAmount").innerHTML = totalPrice;
+        }
+      }
+    </script>
+  </body>
+</html>
